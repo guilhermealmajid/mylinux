@@ -1,0 +1,6 @@
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.34-1_all.deb -O mysql-apt-config.deb
+
+apt update
+apt install mysql-server -y
+apt install phpmyadmin -y
+
