@@ -1,0 +1,24 @@
+# sudo apt install dnsmasq
+# Listen for DHCP and DNS requests only on specified interfaces
+interface=wlp62s0
+interface=enp63s0
+
+# Need to supply the range of addresses available for lease and optionally a lease time.
+dhcp-range=wlp62s0,192.168.0.50,192.168.0.150,24h
+dhcp-range=enp63s0,192.168.1.50,192.168.1.200,12h
+#----------------------
+
+sudo apt install hostapd
+/etc/hostapd/hostapd.conf
+
+interface=wlp62s0
+ssid=guizao
+hw_mode=g
+channel=6
+wmm_enabled=0
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=12345678
+rsn_pairwise=CCMP
