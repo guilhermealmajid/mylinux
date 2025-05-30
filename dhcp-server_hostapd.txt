@@ -28,6 +28,7 @@ net.ipv4.ip_forward=1
 sudo sysctl -p
 
 #Cria tabela NAT de todo pacote vindo de outras interfaces e da propria maquina antes de ser roteado.
+#pode mudar para USB modem celular ou placa de rede, assim deixa funcao Hotspot funcional.
 sudo iptables -t nat -A POSTROUTING -o wlp62s0 -j MASQUERADE
 
 #encaminha pacotes vindo do wifi para saida paca de rede
